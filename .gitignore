@@ -1,4 +1,5 @@
 /data
 .mnist
 model.pt
-
+mlruns
+__pycache__
