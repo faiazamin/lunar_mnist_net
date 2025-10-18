@@ -1,0 +1,6 @@
+artifact_location: file:///Users/faiazamin/Documents/Projects/AI/mnisnet/mlruns/396876187040531503
+creation_time: 1760799022353
+experiment_id: '396876187040531503'
+last_update_time: 1760799022353
+lifecycle_stage: active
+name: mnist_repro_pipeline

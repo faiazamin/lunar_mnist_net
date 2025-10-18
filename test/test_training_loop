@@ -1,7 +1,7 @@
 import torch
-from src.train import train
+from ..src.train import train
 
 
-def test_gradient():
+def test_train_loop():
     model = train()
-    hasattr(model, "forward")
+    assert hasattr(model, "forward")

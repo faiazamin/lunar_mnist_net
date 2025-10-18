@@ -1,0 +1,8 @@
+setup.py
+lunar_mnistnet.egg-info/PKG-INFO
+lunar_mnistnet.egg-info/SOURCES.txt
+lunar_mnistnet.egg-info/dependency_links.txt
+lunar_mnistnet.egg-info/requires.txt
+lunar_mnistnet.egg-info/top_level.txt
+test/test_gradient.py
+test/test_shape.py

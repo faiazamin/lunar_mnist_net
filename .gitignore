@@ -1,1 +1,4 @@
 /data
+.mnist
+model.pt
+

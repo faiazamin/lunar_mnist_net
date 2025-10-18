@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: lunar_mnistnet
+Version: 0.1.0
+Requires-Dist: torch>=2.0
+Requires-Dist: mlflow>=2.10
+Requires-Dist: numpy>=1.0
+Requires-Dist: pytest
+Dynamic: requires-dist

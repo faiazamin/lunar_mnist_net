@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/faiazamin/Documents/Projects/AI/mnisnet/mlruns/396876187040531503/b131110a6f594189a2aa86c0670490f9/artifacts
+end_time: 1760799102922
+entry_point_name: ''
+experiment_id: '396876187040531503'
+lifecycle_stage: active
+run_id: b131110a6f594189a2aa86c0670490f9
+run_name: capable-auk-759
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760799025761
+status: 3
+tags: []
+user_id: faiazamin

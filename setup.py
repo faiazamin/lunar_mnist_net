@@ -7,7 +7,7 @@ setup(
     install_requires=[
         "torch>=2.0",
         "mlflow>=2.10",
-        "numpy>=1.0"
+        "numpy>=1.0",
         "pytest"
     ],
 )

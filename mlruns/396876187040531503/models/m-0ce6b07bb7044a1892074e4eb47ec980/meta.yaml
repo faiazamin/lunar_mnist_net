@@ -1,0 +1,10 @@
+artifact_location: file:///Users/faiazamin/Documents/Projects/AI/mnisnet/mlruns/396876187040531503/models/m-0ce6b07bb7044a1892074e4eb47ec980/artifacts
+creation_timestamp: 1760799096917
+experiment_id: '396876187040531503'
+last_updated_timestamp: 1760799102918
+model_id: m-0ce6b07bb7044a1892074e4eb47ec980
+model_type: null
+name: model
+source_run_id: b131110a6f594189a2aa86c0670490f9
+status: 2
+status_message: null

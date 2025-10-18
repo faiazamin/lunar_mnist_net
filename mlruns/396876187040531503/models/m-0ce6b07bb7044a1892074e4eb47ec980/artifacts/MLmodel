@@ -1,0 +1,23 @@
+artifact_path: file:///Users/faiazamin/Documents/Projects/AI/mnisnet/mlruns/396876187040531503/models/m-0ce6b07bb7044a1892074e4eb47ec980/artifacts
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.11.0
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.2.2
+mlflow_version: 3.5.0
+model_id: m-0ce6b07bb7044a1892074e4eb47ec980
+model_size_bytes: 441552
+model_uuid: m-0ce6b07bb7044a1892074e4eb47ec980
+prompts: null
+run_id: b131110a6f594189a2aa86c0670490f9
+utc_time_created: '2025-10-18 14:51:36.930308'
