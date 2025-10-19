@@ -18,12 +18,12 @@ class InputData(BaseModel):
 
 @app.post("/predict")
 def post(input: InputData):
-    x = torch.tensor([input.features], type = torch.float32)
-    with torch.no_grad:
+    x = torch.tensor([input.features], dtype=torch.float32)
+    with torch.no_grad():
         logits = model(x)
         pred = int(torch.argmax(logits))
     mlflow.log_metric("prediction", pred)
-    mlflow.log_params("input length", len(x))
+    mlflow.log_param("input length", len(x))
     return {"prediction": pred}
 
 
