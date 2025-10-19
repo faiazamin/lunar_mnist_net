@@ -46,7 +46,7 @@ def train(config_path="src/config.yaml"):
             mlflow.log_metrics({"train_loss": train_loss, "val_loss": val_loss, "val_acc": acc}, step=epoch)
             print(f"Epoch {epoch+1}/{cfg['epochs']} | train:{train_loss:.4f} | val:{val_loss:.4f} | acc:{acc:.4f}")
 
-        torch.save(model.state_dict(), "model.pt")
+        torch.save(model.state_dict(), "model/model.pt")
         mlflow.pytorch.log_model(model, "model")
 
 if __name__ == "__main__":
