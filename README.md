@@ -57,6 +57,3 @@ print(hasattr(model, "forward"))  # should be True
 
 ## Contributing
 Contributions are welcome. Keep changes small, include tests for new functionality, and follow the existing code style.
-
-## License
-Add a suitable LICENSE file or header to indicate the intended license for this project.
