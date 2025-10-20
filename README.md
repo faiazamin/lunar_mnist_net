@@ -1,59 +1,63 @@
 # mnisnet
 
-mnisnet is a small PyTorch-based project that provides a MNIST example model and a simple training entry point. The code exposes a MNISTNet model (src.model.MNISTNet) and a training helper (src.train.train) intended for tests and quick experiments.
+mnisnet is a small PyTorch example project that provides:
+- MNISTNet model (src.model.MNISTNet)
+- A simple training entry point (src.train.train) used by tests and examples
 
-## Features
-- MNISTNet model class (src.model.MNISTNet)
-- Simple training entry point (src.train.train) that returns a trained model object
-- Tests that validate shapes, gradients and a minimal training loop
+Quick goals:
+- Provide a minimal, testable MNIST model and training loop.
+- Keep tests runnable from the project root using both package-relative and absolute imports.
 
-## Requirements
+Requirements
 - Python 3.8+
-- PyTorch (version compatible with your system)
-- pytest for running tests
+- PyTorch (cpu or cuda build matching your system)
+- pytest
 
-Install typical dependencies (adjust versions as needed):
+Setup (recommended)
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-# If you have a requirements.txt, use:
-# pip install -r requirements.txt
 pip install torch torchvision pytest
 ```
 
-## Running tests
-From the project root:
+Run tests
+From the project root run:
 ```bash
 pytest -q
 ```
 
-If tests use package imports (e.g. `from src.model import MNISTNet`) ensure you run pytest from the project root so the package layout is preserved.
-
-## Quick usage
-Start a Python REPL or a small script from the project root:
-
+Usage example
 ```python
 from src.train import train
 from src.model import MNISTNet
 
-# run default training (returns a model instance)
-model = train()
-# use model.forward or model(...) for inference
-print(hasattr(model, "forward"))  # should be True
+model = train()        # runs the simple training helper and returns a model
+print(hasattr(model, "forward"))
 ```
 
-## Project layout
-- src/               — package containing model and training code
-  - model.py         — contains MNISTNet
-  - train.py         — contains train() helper
-  - __init__.py      — exposes MNISTNet and train for convenience
-- test/              — test suite (uses src.* imports)
-- README.md          — this file
+Project layout
+- src/
+  - model.py        — MNISTNet implementation
+  - train.py        — train() helper returning a model instance
+  - __init__.py     — package exports and test-friendly aliasing
+- test/             — pytest test suite
+- README.md         — this file
+- .gitignore        — ignores data, model artifacts, mlruns, etc.
 
-## Notes
-- Tests expect the package layout to be importable from the project root. If you see import errors for `src`, ensure you are running commands from the repository root and that the virtual environment has needed packages installed.
-- The README intentionally avoids implementation specifics; consult src/model.py and src/train.py for details.
+Notes & troubleshooting
+- Tests and examples import the package as src (e.g. `from src.model import MNISTNet`). The package root is configured to expose the internal `mnisnet.src` as the top-level `src` module so imports work when running pytest from the repository root.
+- If you see "ModuleNotFoundError: No module named 'src'", make sure:
+  - You run pytest from the project root (/Users/faiazamin/Documents/Projects/AI/mnisnet).
+  - Your virtualenv is active and dependencies are installed.
+- If needed, run pytest with increased verbosity to inspect import failures:
+```bash
+pytest -q -k "" -s
+```
 
-## Contributing
-Contributions are welcome. Keep changes small, include tests for new functionality, and follow the existing code style.
+Contributing
+- Keep changes small and add tests for new behavior.
+- Run pytest locally before pushing changes.
+
+License
+- Add a LICENSE file to indicate the intended license for the project.
